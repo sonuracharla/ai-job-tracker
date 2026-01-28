@@ -1,0 +1,28 @@
+name: Daily Job Tracker
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Load credentials
+        run: |
+          echo "$GOOGLE_CREDENTIALS" > credentials.json
+
+      - name: Run job tracker
+        run: python job_tracker.py
