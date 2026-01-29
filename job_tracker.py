@@ -54,7 +54,11 @@ if system_data.get("last_run") == today:
 SEARCH_SITES = {
     "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=",
     "ZipRecruiter": "https://www.ziprecruiter.com/jobs-search?search=",
-    "Glassdoor": "https://www.glassdoor.com/Job/jobs.htm?sc.keyword="
+    "Glassdoor": "https://www.glassdoor.com/Job/jobs.htm?sc.keyword=",
+    "Greenhouse": "https://boards.greenhouse.io/search?query=",
+    "Lever": "https://jobs.lever.co/search?query=",
+    "ADP": "https://jobs.adp.com/search/?q=",
+    "UKG": "https://recruiting.ultipro.com/search/?q="
 }
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
