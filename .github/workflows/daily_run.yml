@@ -22,7 +22,7 @@ jobs:
 
       - name: Load credentials
         run: |
-          echo "$GOOGLE_CREDENTIALS" > credentials.json
+          printf "$GOOGLE_CREDENTIALS" > credentials.json
 
       - name: Run job tracker
         run: python job_tracker.py
